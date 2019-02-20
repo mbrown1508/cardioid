@@ -1,6 +1,6 @@
 import pygame
 import math
-from random import randint
+
 
 WIDTH, HEIGHT = 800, 800
 X_OFFSET, Y_OFFSET = WIDTH / 2, HEIGHT / 2
@@ -11,10 +11,6 @@ pygame.display.set_caption("Cardioid")
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)
-BLUE =  (  0,   0, 255)
-GREEN = (  11, 102,   35)
-RED =   (255,   0,   0)
-OFF_WHITE = (225, 225, 225)
 
 
 def circle(pos, radius, color=WHITE):
@@ -45,8 +41,6 @@ run = True
 clock = pygame.time.Clock()
 while run:
     dt = clock.tick(60)
-
-
     factor += 0.01
 
     win.fill(BLACK)
@@ -55,10 +49,6 @@ while run:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 run = False
-            # elif event.key == pygame.K_SPACE:
-            # #     pass
-            # # elif event.key == pygame.K_r:
-            # #     started = False
         elif event.type == pygame.QUIT:
             run = False
 
@@ -71,7 +61,6 @@ while run:
 
         line(a_pos, b_pos)
 
-    # Draw a circle
     circle([0, 0], r)
 
     pygame.display.update()
