@@ -23,7 +23,7 @@ def line(pos1, pos2, color=WHITE):
 
 total = 200
 step = math.pi * 2 / total
-factor = 6000
+factor = 1
 offset = ()
 r = WIDTH / 2.2
 
